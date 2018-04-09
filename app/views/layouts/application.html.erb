@@ -18,8 +18,10 @@
             <% else %>
               <li><%= link_to 'Register', new_user_registration_path %> <%= link_to 'Sign in', new_user_session_path %></li>
             <% end %>
+            <!--new -->
+             <% if user_signed_in? %>
             <li class="activecart" style="color:white";>Shopping Cart: <%= render 'layouts/cart' %></li>
-            
+            <% end %>
           </ul>
         </div>
       </div> 
@@ -48,4 +50,3 @@
     </div>
   </body>
 </html>
-

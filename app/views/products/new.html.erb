@@ -1,5 +1,10 @@
+<% if current_user.admin? %>
 <h1>New Product</h1>
 
 <%= render 'form', product: @product %>
 
 <%= link_to 'Back', products_path %>
+<% end %>
+
+<h1>Admin Access Only</h1>
+<%= link_to 'Continue Shopping', :controller => :products %> 

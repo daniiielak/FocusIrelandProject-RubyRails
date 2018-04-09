@@ -1,40 +1,35 @@
+<h1>Product Details</h1>
+<p>Find the details for your chosen product below: </p>
+
+<div class="yellow-surrounding-box">
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Product:</strong>
-  <%= @product.product %>
-</p>
+<p> <strong>Product:</strong> <%= @product.product %></p>
+<br>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+<p><strong>Price:</strong> € <%= @product.price %></p>
+ <br>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
+<p><strong>Description:</strong></p>
+<p><%= @product.description %></p>
+<br>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+<p><strong>Product Image:</strong></p>
+ <%= link_to (image_tag @product.image_url, :style =>'height:200px'), @product %>
+<br>
 
-<p>
-  <strong>Category:</strong>
-  <%= @product.category %>
-</p>
+<!-- <p><strong>Category:</strong></p> -->
+ <!-- <p><%= @product.category %></p>-->
 
-<div class='links'>
-            <% if current_user && current_user.admin? %>
-              <td><%= link_to 'Edit', edit_product_path(product) %></td>
-              <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% if user_signed_in? %>
+  <br>
+          <p><strong>Add this product to your cart:</strong></p>
+          <%= form_for(@order_item, remote: true) do |f| %>
+					<%= f.hidden_field :product_id, value: @product.id %>
+						<h5>€ <%= @product.price %></h5>
+					<div class="form-group">
+						<%= f.text_field :quantity, value: 1, min: 1, :maxlength=>"7" %> 
+					</div>
+            <%= f.submit "Add to cart", data: {confirm: "Item was added to the cart"} %>
             <% end %>
-</div>
-<% end %>
-
-<!-- Tola changed to above, so edit and destroy disappear-->
-<!--%= link_to 'Edit', edit_product_path(@product) %> |
-<!--%= link_to 'Back', products_path %>
-<!--td><!%= button_to "Add to Cart", add_to_cart_path(:product_id => @product), :method => :post %></td>
-
+            	<% end %>

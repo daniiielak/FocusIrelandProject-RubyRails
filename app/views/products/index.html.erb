@@ -25,30 +25,37 @@
         </div>
       </td>
         <td>
+          <br>
           <div class='title'>
-            <%= link_to product.product, product%>
+            <strong><%= link_to product.product, product%></strong>
           </div>
           <div class='description'>
             <%= product.description %>
           </div>
           <div class='price'>
-            <%= number_to_currency(product.price, :unit => '€') %>
+            <p><strong>Price: <%= number_to_currency(product.price, :unit => '€') %></strong></p>
           </div>
+          <br>
           <div class='links'>
             <% if current_user && current_user.admin? %>
               <td><%= link_to 'Edit', edit_product_path(product) %></td>
               <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
               <% else %>
-              <!-- ****T *****-->
+
+     
+					<% if user_signed_in? %>
             <td><div class="pull-right">
           <%= form_for(@order_item, remote: true) do |f| %>
 					<%= f.hidden_field :product_id, value: product.id %>
-						<h5>€ <%= product.price %></h5>
 					<div class="form-group">
-						<%= f.text_field :quantity, value: 1, min: 1, class: 'form-control' %>
+						<%= f.text_field :quantity, value: 1, min: 1, :maxlength=>"7" %> 
+						<br>
 					</div>
-					<%= f.submit "Add to cart", class: 'btn btn-primary btn-sm' %>
-				<% end %></td>
+					
+            <%= f.submit "Add to cart", data: {confirm: "Item was added to the cart"} %>
+            <% end %>
+					
+				<% end %></br></td>
 				</div>
           <% end %>
           </div>
