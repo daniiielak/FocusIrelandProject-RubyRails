@@ -1,0 +1,39 @@
+<div id="registration-form-main">
+ <div class="yellow-surrounding-box">
+   <div class ='registrationImage'>
+         <%= image_tag("FocusRegResize.jpg", :alt => "rss feed") %>
+    </div>
+  <h2> Change the face of homelessness together and register with us today!</h2>
+  <h4> In the past four years, we have seen the number of people in emergency accomodation increase threefold.
+   By registering below you can gift someone in need this year, bring joy to families and change lives.</h4>
+  <h5> You will be redirected to fill out your Profile. Please ensure you've updated your profile with your current details.</h5>
+  </br>
+  
+   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+   <%= devise_error_messages! %>
+
+  <div class="registration-email">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "registration-input" %>
+  </div>
+
+  <div class="registration-password">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off", class: "registration-input" %>
+  </div>
+
+  <div class="registration-password">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: "registration-input" %>
+  </div>
+
+  <div>
+    <%= f.submit "Sign up", class: "registration-submit" %>
+    <% end %>
+  </div>
+ 
+ </div>
+</div>

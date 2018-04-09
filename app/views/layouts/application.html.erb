@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Focus Ireland</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+  <!-- Login bar -->
+    <div id='menu'>
+        <div id="navbar-login">
+          <ul>
+           <% if user_signed_in? %>
+              <li style="color:white;">Logged in: <%= current_user.email %> </li>
+              <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+            <% else %>
+              <li><%= link_to 'Register', new_user_registration_path %> <%= link_to 'Sign in', new_user_session_path %></li>
+            <% end %>
+            <li class="activecart" style="color:white";>Shopping Cart: <%= render 'layouts/cart' %></li>
+            
+          </ul>
+        </div>
+      </div> 
+            
+        <div id='header'>
+      <!-- Header Image here-->
+      </div>
+      <div id='menu'>
+        <div id="navbar">
+          <ul>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/products">Products</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id='container'>
+        <div id='content'>
+          <p class="alert"><%= flash[:alert] %></p>
+            <%= yield %>
+            
+           
+  </div>
+  <div id='footer'>
+    <h6 class="footertext">&copy; Focus Ireland Online Shoe Box Appeal &trade; 2018</h6>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,13 @@
+<h1>Payment</h1>
+<body>
+    <div class="yellow-surrounding-box">
+                <div class="pay_now">
+	            <%= render "payments/pay_now" %>
+	           </div>
+	  </div>
+	  <div>
+	    <% if current_user.admin? %>
+   <%= link_to 'New Product', new_product_path %>
+   <% end %>
+</div>
+</body>

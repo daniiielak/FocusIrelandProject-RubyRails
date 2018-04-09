@@ -1,0 +1,18 @@
+<h1>You Cart</h1>
+
+<div class="yellow-surrounding-box">
+<body>
+    <div class="yellow-surrounding-box">
+                <div class="cart_item">
+	            <%= render "carts/cart_item" %>
+	           </div>
+	           <div class="btn btn-success">
+	           <%= link_to "Pay Now #{current_order.subtotal}", payments_path %>
+	           </div>
+	  </div>
+	  <div>
+	    <% if current_user.admin? %>
+   <%= link_to 'New Product', new_product_path %>
+   <% end %>
+</div>
+</body>

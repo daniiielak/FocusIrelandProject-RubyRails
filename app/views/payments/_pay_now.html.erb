@@ -1,0 +1,25 @@
+ <form>
+    <div class="input-group">
+    	<input id="name" type="text" class="form-control" name="name" placeholder="Name">
+      <span class="input-group-addon"></i></span> 
+    </div>
+    <div class="input-group">
+       	<input id="telephone" type="text" class="form-control" name="telephone" placeholder="Telephone">
+      <span class="input-group-addon"></i></span> 
+    </div>
+      <div class="input-group">
+         	<input id="address" type="text" class="form-control" name="address" placeholder="Address">
+      <span class="input-group-addon"></i></span> 
+    </div>
+  </form>
+	<div>
+		<h5>Price: €<%= "#{current_order.subtotal}"%></h5>
+		<h5>Shipping fee: free</h5>
+		<h5>Total Price: €<%= "#{current_order.subtotal}"%></h5>
+		<div class="btn btn-success">
+		<%= link_to 'Pay Now', thankyous_path %>
+	  <% @order_items.each do |current_order| %>
+	  <%= link_to "Pay Now", current_order, method: :delete, remote: true, class: 'btn btn-success' %>
+	     </div>
+	     <% end %>
+	</div>

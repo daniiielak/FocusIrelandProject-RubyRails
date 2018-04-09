@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<div class="yellow-surrounding-box">
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @profile.firstname %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @profile.lastname %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @profile.address %>
+</p>
+
+<% if current_user && current_user.admin? %>
+ <p>
+  <strong>User:</strong>
+  <%= @profile.user %>
+ </p>
+<% end %>
+
+ <%= link_to 'Edit', edit_profile_path(@profile) %> 
+<% if current_user && current_user.admin? %>
+ <%= link_to 'Back', profiles_path %>
+<% end %>
+
+</div>

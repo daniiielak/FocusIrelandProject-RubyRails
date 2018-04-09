@@ -1,0 +1,16 @@
+<div class="purple-surrounding-box">
+<h2 class = "white_text">Forgot your password?</h2>
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :Provide_your_email_address_below, class: "white_text" %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "forgot_input" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Send me reset password instructions", data: { confirm: 'Send the reset instructions to this email?' }, class: "forgot_submit"%>
+  </div>
+<% end %>
+</div>
+<%= render "devise/shared/links" %>

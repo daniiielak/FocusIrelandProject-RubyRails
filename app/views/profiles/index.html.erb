@@ -1,0 +1,41 @@
+
+<p id="notice"><%= notice %></p>
+
+<h1>Profiles</h1>
+
+<div class="yellow-surrounding-box">
+  
+<table>
+  <thead>
+    <tr style = "font-size: 20px;">
+      <th style = "padding: 10px;">Firstname</th>
+      <th style = "padding: 10px;">Lastname </th>
+      <th style = "padding: 10px;"> Address</th>
+      <th> User ID </th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+ 
+  <tbody>
+  
+    <% @profiles.each do |profile| %>
+      <tr style = "color:black; font-style:arial;">
+        <td ><%= profile.firstname %></td>
+        <td><%= profile.lastname %></td>
+        <td><%= profile.address %></td>
+        <td><%= profile.user %></td>
+        
+        
+        <td><%= link_to 'Show', profile %></td>
+        <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
+        <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+    
+   <% end %>
+  </tbody>
+</table>
+</div>
+<br>
+ 
+

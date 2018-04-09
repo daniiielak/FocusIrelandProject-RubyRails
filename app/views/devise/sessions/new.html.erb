@@ -1,0 +1,32 @@
+<div id="registration-form-main">
+ <div class = "yellow-surrounding-box">
+ 
+  <h2 id = "LoginHeader">Login to your account </h2> 
+  <h4> We're happy to see you return! Sign in here to access your orders.</h4>
+  <h4>We and the homeless community of Ireland thank you for choosing Focus Ireland.</h4>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+  <div class="registration-email">
+    <%= f.label :email, style: "color: white" %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "registration-input" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, style: "color: white" %><br />
+    <%= f.password_field :password, autocomplete: "off", class: "registration-input" %>
+  </div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me, style: "color: white" %>
+    </div>
+  <% end -%>
+
+   <div class="actions">
+    <%= f.submit "Log in", class: "forgot_submit" %>
+   </div>
+  <% end %>
+ </div>
+</div>
+<%= render "devise/shared/links" %>

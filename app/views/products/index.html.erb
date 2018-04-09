@@ -1,0 +1,65 @@
+  <html>
+   <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    </head>
+<body>
+<p id="notice"><%= notice %></p>
+
+<h1>Shoebox Appeal Products</h1>
+  <p>As with our regular offline Shoeobox Appeal Project, also online, you are able to customize your shoebox present as much as you'd like. Just choose from the items below, divided into "men" "women" and "kids" and create your own shoebox with an individualized message for your receipient.</p>
+  
+  <%= form_tag(products_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Products" %>
+  <%= submit_tag "Search" %>
+  <% end %>
+  <br>
+
+<div class="yellow-surrounding-box">
+
+<table class='catalog'>
+  <% @products.each do |product| %>
+   <tr>
+      <td>
+        <div class='image'>
+          <%= link_to (image_tag product.image_url, :style =>'height:100px'), product %>
+        </div>
+      </td>
+        <td>
+          <div class='title'>
+            <%= link_to product.product, product%>
+          </div>
+          <div class='description'>
+            <%= product.description %>
+          </div>
+          <div class='price'>
+            <%= number_to_currency(product.price, :unit => '€') %>
+          </div>
+          <div class='links'>
+            <% if current_user && current_user.admin? %>
+              <td><%= link_to 'Edit', edit_product_path(product) %></td>
+              <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <% else %>
+              <!-- ****T *****-->
+            <td><div class="pull-right">
+          <%= form_for(@order_item, remote: true) do |f| %>
+					<%= f.hidden_field :product_id, value: product.id %>
+						<h5>€ <%= product.price %></h5>
+					<div class="form-group">
+						<%= f.text_field :quantity, value: 1, min: 1, class: 'form-control' %>
+					</div>
+					<%= f.submit "Add to cart", class: 'btn btn-primary btn-sm' %>
+				<% end %></td>
+				</div>
+          <% end %>
+          </div>
+        </tr>
+    <% end %>
+</table>          
+  </div>        
+  <br>
+   <% if current_user && current_user.admin? %>
+   <%= link_to 'New Product', new_product_path %>
+   <% end %>
+
+   </body>
+  </html>

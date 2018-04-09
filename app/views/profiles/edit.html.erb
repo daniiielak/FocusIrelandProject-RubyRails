@@ -1,0 +1,10 @@
+<h1>Editing Profile</h1>
+
+<div class="yellow-surrounding-box">
+
+<% if current_user && current_user.admin? %>
+ <%= link_to 'Show', @profile %> |
+ <%= link_to 'Back', profiles_path %>
+<% end %>
+
+<%= render 'form', profile: @profile %>

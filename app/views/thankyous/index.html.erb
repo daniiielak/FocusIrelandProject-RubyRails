@@ -1,0 +1,13 @@
+<body>
+    <div class="yellow-surrounding-box">
+                <div class="msg">
+	            <%= render "thankyous/msg" %>
+
+	           <%= link_to 'Continue Shopping', :controller => :products %>
+	  </div>
+	  <div>
+	    <% if current_user.admin? %>
+   <%= link_to 'New Product', new_product_path %>
+   <% end %>
+</div>
+</body>

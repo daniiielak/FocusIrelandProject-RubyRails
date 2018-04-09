@@ -1,0 +1,1226 @@
+/*
+Stylesheet used for the focus-ireland shoebox apparel page. 
+*/
+
+body {
+background: url("/assets/Site/street-background.jpeg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1, h2, h3, h4, h5, h6 {
+		font-family: Arial, sans-serif;
+		font-weight: bold;
+    margin: 0px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+#container {
+    position: relative;
+    min-height: 850px;
+    border: none;
+    max-width: 1900px;
+    min-width: 500px;
+    margin: none;
+}
+
+#first-column {
+	margin: 3px 3px 3px 3px;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    width: 279px;
+    margin: 3px;
+}
+div#first-column {
+    left: 710px;
+}
+#content {
+	 position: relative;
+		margin-top: 2px;
+    padding: 5px 35px;
+    background-color: white;
+    border: none;
+}
+
+div#header,
+div#footer,
+div#container,
+div#menu {
+    border: none;
+    max-width: 1024px;
+    min-width: 744px;
+    margin: auto;
+    -moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+}
+
+div#menu {
+    border-bottom: none;
+    width: 1024px;
+    height: 45px;
+    font-weight: bold;
+}
+div#header {
+    border-bottom: none;
+    background-image: url("/assets/Site/header-image-small.png");
+    width: 1024px;
+    height: 281px;
+}
+div#footer {
+    margin-top: 5px;
+    padding: 5px;
+    color: white;
+    border-top: none;
+}
+
+div.box {
+	margin: 0px 0px 30px 5px;
+	height: 260px;
+	background-image: url("/assets/Site/bg3.gif");
+ 	border-radius:9px;
+ 	-moz-border-radius:9px; /* Old Firefox */
+}
+
+div.searchbox {
+	margin: 0px 0px 30px 5px;
+	height: 55px;
+	border:2px orange solid;
+	background-image: url("/assets/Site/bg3.gif");
+ 	border-radius:9px;
+ 	-moz-border-radius:9px; /* Old Firefox */
+
+}
+
+div.loginbox {
+	margin: 0px 0px 30px 5px;
+	height: 65px;
+ 	border-radius:9px;
+ 	background-image: url("/assets/Site/bg3.gif");
+ 	-moz-border-radius:9px; /* Old Firefox */
+
+}
+
+.video-box {
+	text-align: center;
+}
+/* ---------- Login bar --------------- */
+#navbar-login ul          
+ {
+     padding: 12px;
+     margin: 0px;         
+     list-style-type: none;         
+     text-align: right;  
+     font-size: 12px;      
+     background-color: #333333;   
+ }  
+ 
+ #navbar-login ul li           
+ {
+     display: inline;
+       
+ }  
+  .activecart         
+ {
+     display: inline;
+       
+ }
+ 
+ #navbar-login ul li a          
+ {
+     text-decoration: none;         
+     padding: .2em 1em;       
+     color: #fff;         
+     background-color: #333333; 
+        -moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+     }  
+     
+#navbar-login ul li a:hover          
+{
+    padding: 15px;
+    color: white;
+    background-color: #fcd703; 
+       -moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+
+/* ---------- Navigation bar --------------- */
+ #navbar ul          
+ {
+     padding: 15px;
+     margin: 0px;         
+     list-style-type: none;         
+     text-align: left;  
+     font-size: 17px;      
+     background-color: #333333;   
+ }  
+ 
+ #navbar ul li           
+ {
+     display: inline;
+       
+ }  
+  .activecart         
+ {
+     display: inline;
+     /*padding-left: 200px;*/
+       
+ }
+ 
+ #navbar ul li a          
+ {
+     text-decoration: none;         
+     padding: .2em 1em;       
+     color: #fff;         
+     background-color: #333333; 
+        -moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+     }  
+     
+#navbar ul li a:hover          
+{
+    padding: 15px;
+    color: white;
+    background-color: #fcd703; 
+       -moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+
+.box img {
+	width: 100%;
+	height: 91%;
+}
+
+#PageHeader {
+	font-family: Arial, sans-serif;
+	width: 98%;
+	height: 30px;
+	text-align:center;
+	font-size: 30px;
+	color:firebrick;
+	padding-top: 10px;
+	margin:0px;
+	margin-bottom: 10px;
+	margin-top: 5px;
+	margin-left: 5px;
+	background-image:url('/assets/Site/PageHeader.jpg');
+	background-size:40px;
+	border:2px silver solid;
+ 	border-radius:9px;
+ 	-moz-border-radius:9px; /* Old Firefox */
+
+}
+
+/* --------- Product Detailed Display -------------------*/
+#imageDisplay
+{
+	width: 350px;
+	height: 370px;
+	border: 2px black solid;
+	background-color:black;	
+	float:left;
+	margin-left: 10px;
+}
+
+#imageList {
+	float: left;
+	text-align: left;
+	background-color:black;
+	height: 100%;
+	width: 300px;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	margin-left:5px;
+}
+
+#imageList li {
+	display:inline;
+	
+	text-align: left;
+}
+
+#imageList img {
+	margin-right: 5px;
+	width: 50px;
+	height: 50px;	
+	border: 4px silver solid;	
+}
+
+#largeDisplay {
+	height: 290px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+#clubInfo {
+	float: left;
+	width: 308px;
+	margin-left: 10px;
+	padding-left: 5px;
+	border: 2px black solid;
+}
+
+
+#largeDisplay img {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+#imageThumbs {
+	margin:0;
+	float:left;
+}
+
+.showHeader {
+	width: 97%;
+	height: 20px;
+	text-align:center;
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	color: Azure;
+	background-color:slategrey;
+	border:2px silver solid;
+ 	border-radius:9px;
+ 	-moz-border-radius:9px; /* Old Firefox */
+
+}
+/*-------------------------------------------*/
+
+
+/* --------- Product Catalog List -------------------*/
+.catalogList {
+	position: relative;
+	float: left;
+	margin: 10px;
+	border: 2px black solid;
+	width: 208px;
+	/*height:230px;*/
+	overflow:visible;
+	
+	
+ 	border-radius:7px;
+ 	-moz-border-radius:5px; /* Old Firefox */
+
+}
+
+.catalogImage {
+	
+}
+
+.catalogImage img {
+	margin-top:2px;
+	margin-left:2px;
+	margin-right:2px;
+	width: 98%;
+	height: 130px;
+}
+
+.MoreDetails {
+	float:left;
+	margin-left: 10px;
+	width: 70px;
+	height: 17px;
+	background-color:darkolivegreen;
+	color: white;
+	font-family: Arial, sans-serif;
+	text-align: center;
+	border:2px silver solid;
+ 	border-radius:9px;
+ 	-moz-border-radius:9px; /* Old Firefox */
+}
+
+.addCart {
+	float:left;
+	margin-left: 10px;
+	width: 80px;
+	height: 17px;
+	background-color: orangered;
+	color: white;
+	font-family: Arial, sans-serif;
+	text-align: center;
+	border:2px silver solid;
+ 	border-radius:9px;
+ 	-moz-border-radius:9px; /* Old Firefox */
+}
+
+.adminLinks {
+	position: absolute;
+	top: 3px;
+	right: 5px;
+	
+}
+
+.adminLinks img {
+	border-style: none;
+}
+
+
+.adminLinks a:hover {
+	text-decoration: none;
+	background-color: transparent;
+}
+
+
+/*
+.adminLinks a {
+	background-color: seagreen;
+	padding: 0px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin: 2px;
+	font-size: 10px;
+	border: 2px red solid;
+	border-radius:5px;
+ 	-moz-border-radius:5px;
+}
+
+.adminLinks a:hover {
+	text-decoration: none;
+	color: orange;
+}
+
+.adminLinks a:link {
+	text-decoration: none;
+	color: azure;
+}
+
+.adminLinks a:active {
+	text-decoration: none;
+	color: azure;
+}
+
+.adminLinks a:visited {
+	text-decoration: none;
+	color: azure;
+}
+
+*/
+
+.catalogPrice {
+	text-align:center;
+	margin:7px;
+	font-family: Arial, sans-serif;
+	font-size:20px;
+	color:darkcyan;
+}
+
+.message {
+	font-family: Arial, sans-serif;
+	font-size: 8px;
+	color:darkcyan;
+}
+
+.catalogName {
+	margin-left: 5px;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	height: 32px;
+}
+
+#ProductDisplay {
+	float:left;
+}
+
+#catalogHeader {
+	margin: 5px;
+	border: 0px black solid;
+	height: 25px;
+}
+
+/* ------------------- Drop down BOxex for Category and Brand ---------------*/
+#sortTerms {
+	float: left;
+	font-family: Arial, sans-serif;
+	font-size: 18px;
+}
+
+#sortBoxes {
+	float: right
+}
+
+/* ---------------------- Whats in the bag ------------------------------ */
+#WhatsInTheBag {
+	position: relative;
+	width: 95%;
+	margin-left: 15px;
+	overflow: auto;
+	border: 2px red solid;
+	border-radius:9px;
+ 	-moz-border-radius:9px; /* Old Firefox */
+}
+
+#editClubsLink {
+	position:absolute;
+	margin: 5px;
+	right: 0;
+	top: 0;
+}
+
+#editClubsLink img {
+	border: 0;
+}
+
+#editClubsLink a:hover {
+	background-color:transparent;
+}
+
+#BagList {
+
+}
+
+#BagList h2 {
+	color: forestgreen;
+	margin-top: 10px;
+}
+
+#BagImage {
+	float:left;	
+}
+
+#AddClub {
+	width: 91%;
+	margin-left: 15px;
+	margin-top: 10px;
+	padding: 15px;
+	overflow: auto;
+	border: 2px silver solid;
+	border-radius:9px;
+ 	-moz-border-radius:9px; /* Old Firefox */
+}
+
+.listAdmin {
+	visibility: hidden;
+	display: none;
+}
+
+#listAdmin {
+	visibility: hidden;
+	
+}
+
+/* ------------- Profile Info Display ---------------- */
+#profileInfo {
+	position: relative;
+	margin:15px;
+	height: 100%;
+	overflow:auto;
+	border: 2px red solid;
+	border-radius:9px;
+ 	-moz-border-radius:9px; /* Old Firefox */
+}
+.fielduser{
+	display:none;
+}
+#map {
+	float:left;
+	margin:10px;
+}
+
+#profIamge {
+	float:left;
+	margin: 15px;
+	padding:opx;
+	border: 0px red solid;
+	border-radius:9px;
+ 	-moz-border-radius:9px; /* Old Firefox */
+
+}
+
+#profDetails {
+	float:left;
+	margin-top: 0px;
+}
+
+
+
+#BagList ul {
+	list-style-type: none;
+}
+
+/* -------------------- Cart ------------------- */
+.cart {
+	width: 25%;
+	border-collapse:collapse;
+	margin-left: 15px;
+
+}
+
+.cart table, tr, td {
+	border:1px solid black;
+}
+
+.cart img {
+	border: 0px;
+}
+	
+.legend {
+	background-color: thistle;
+}
+
+.btn-grou {
+	background-color: white;
+	padding: 5px;
+	border: 2px red solid;
+	border-radius:15px;
+ 	-moz-border-radius:15px; /* Old Firefox */
+}
+
+#cartLinks a:hover {
+	text-decoration: none;
+	color: azure;
+}
+
+#cartLinks a:link {
+	text-decoration: none;
+	color: azure;
+}
+
+#cartLinks a:active {
+	text-decoration: none;
+	color: azure;
+}
+
+#cartLinks a:visited {
+	text-decoration: none;
+	color: azure;
+}
+
+
+#cartLinks {
+	margin-left: 15px;
+}
+
+.removeButton {
+	background-color: seagreen;
+	padding: 0px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 10px;
+	border: 2px red solid;
+	border-radius:15px;
+ 	-moz-border-radius:15px; /* Old Firefox */
+}
+
+
+.removeLink a:hover {
+	text-decoration: none;
+	color: azure;
+}
+
+.removeLink a:link {
+	text-decoration: none;
+	color: azure;
+}
+
+.removeLink a:active {
+	text-decoration: none;
+	color: azure;
+}
+
+.removeLink a:visited {
+	text-decoration: none;
+	color: azure;
+}
+
+/* ----------------------- Standard Styling for all CRUD pages -------------- */
+#golfForm {
+	border-collapse:collapse;
+	margin: 0 auto;
+    text-align: left;
+    background-color:#FFFFCC;
+}
+
+.actions {
+	margin: 15px;
+	text-align: center;
+}
+
+#golfForm td {
+	padding:3px;
+}
+
+#golfForm td.heading {
+	color:darkgreen;
+}
+
+#golfForm tr.notShowing {
+	visibility: hidden;
+	display: none;
+}
+
+/* -------------------- Login Page --------------------------- */
+
+#loginPage {
+
+}
+
+#login {
+	margin: 0 auto;
+	padding: 15px;
+	background-color:gainsboro;
+	border: 1px darkred solid;
+	width: 250px;
+}
+
+#login label {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	color: navy;
+}
+
+#login span {
+	font-family: Arial, sans-serif;
+	font-size: 10px;
+	color: green;
+}
+
+.logininputs {
+	margin-bottom: 15px;
+}
+
+/* ------------- Login Links ------------------ */
+.linkButtons {
+	float:left;
+	margin-right: 15px;
+	padding: 3px;
+	border: 2px #FF6600 solid;
+	width:90px;
+	background-color:cadetblue;
+	margin-bottom: 5px;
+	border-radius: 7px;
+}
+
+.linkButtons a {
+	font-size: 14px;
+}
+
+.linkButtons a:link {
+	text-decoration:none;
+	color:white;
+}
+
+.linkButtons a:hover {
+	text-decoration:none;
+	color:yellow;
+	background-color:cadetblue;
+}
+
+.linkButtons a:visited {
+	text-decoration:none;
+	color:white;
+}
+
+/* Detailed Display Edit\Back Links */
+#DisplayLinks a:hover {
+	background-color:transparent;
+}
+
+
+/* Image Picker */
+			.list_carousel {
+				background-color: #ccc;
+				margin: 0 0 0px 0px;
+				width: 490px;
+			}
+			
+			.list_carousel img {
+				width: 70px;
+				height: 70px;
+			}
+
+			
+			.list_carousel ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				display: block;
+			}
+			.list_carousel li {
+				font-size: 40px;
+				color: #999;
+				text-align: center;
+				background-color: #eee;
+				border: 3px solid #999;
+				width: 70px;
+				height: 70px;
+				padding: 0;
+				margin: 6px;
+				display: block;
+				float: left;
+			}
+			.list_carousel.responsive {
+				width: auto;
+				margin-left: 0;
+			}
+			.clearfix {
+				float: none;
+				clear: both;
+			}
+			.prev {
+				float: left;
+				margin-left: 10px;
+			}
+			.next {
+				float: right;
+				margin-right: 10px;
+			}
+			.pager {
+				float: left;
+				width: 400px;
+				text-align: center;
+			}
+			.pager a {
+				margin: 0 5px;
+				text-decoration: none;
+			}
+			.pager a.selected {
+				text-decoration: underline;
+			}
+			.timer {
+				background-color: #999;
+				height: 6px;
+				width: 0px;
+			}
+
+/* Chosen Image Display in Admin Panel */
+#imgDisplay {
+	width: 100%;
+	text-align:center;
+	margin: 5px;
+}
+
+#imgDisplay img {
+	border: 4px #666666 solid;
+	width: 300px;
+}
+/* Registration */
+
+textarea {
+    width: 100%;
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+}
+
+input:hover, textarea:hover, input:focus, textarea:focus {
+	background-color:white;
+}
+
+/*-----------Registration------------*/
+#LoginHeader{
+
+	border-width: 5px;
+	padding: 10px;
+	width: 60%;
+	margin: 40px 20px 20px 170px;
+	
+	
+}
+
+#registration-form-main {
+	width:100%;
+	text-align: center;
+	display: block;
+	padding-left: 0px;
+	padding-bottom: 30px;
+}
+
+.yellow-surrounding-box {
+	/*display: inline-block;*/
+	text-align: center;
+	background: #fcd703;
+	padding-left:50px;
+	padding-right:50px;
+	padding-top:20px;
+	padding-bottom:30px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+.registrationImage{
+	width: auto;
+	height: auto;
+	margin: 10px;
+	margin-bottom: 20px;
+	border: 2px black solid;
+	float:right;
+	
+}
+.edit-input{
+	color:#3c3c3c;
+	font-family: Arial, sans-serif;
+  	font-weight:500;
+	font-size: 15px;
+	border-radius: 0;
+	line-height: 22px;
+	background-color: #fbfbfb;
+	padding: 10px 13px 13px 20px;
+	margin-bottom: 9px;
+	margin-left:5px;
+	width:30%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+  border: 3px solid rgba(0,0,0,0);
+  -moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+.registration-input {
+	color:#3c3c3c;
+	font-family: Arial, sans-serif;
+  	font-weight:500;
+	font-size: 15px;
+	border-radius: 0;
+	line-height: 22px;
+	background-color: #fbfbfb;
+	padding: 13px 13px 13px 50px;
+	margin-bottom: 9px;
+	width:100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+  border: 3px solid rgba(0,0,0,0);
+  -moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+
+.registration-input:focus {
+	background: #fff;
+	box-shadow: none;
+	border: 3px solid #333333;
+	color: #333333;
+	outline: none;
+  	padding: 13px 13px 13px 50px;
+}
+
+.registration-name {
+	background-image: url(../images/name.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+	   -moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+.registration-password {
+	background-image: url(../images/name.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+	   -moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+.registration-name:focus {
+	background-image: url(../images/name.svg);
+	background-size: 30px 30px;
+	background-position: 8px 5px;
+  	background-position: 11px 8px;
+	background-repeat: no-repeat;
+	   -moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+
+.registration-email {
+	background-image: url(../images/email.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+	   -moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+
+.registration-email:focus {
+	background-size: 30px 30px;
+  	background-position: 11px 8px;
+	background-repeat: no-repeat;
+	   -moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+
+#signed-in-message {
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+		   -moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+
+.registration-submit {
+	outline: none;
+	font-family: Arial, sans-serif;
+	width: 100%;
+	border: #ffffff solid 3px;
+	cursor:pointer;
+	background-color: #333333;
+	color:white;
+	font-size:20px;
+	padding-top:16px;
+	padding-bottom:16px;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+  	font-weight:600;
+  		   -moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+
+.registration-submit:hover {
+	border: #333333 solid 4px;
+	background-color: #fff;
+	color: #fcd703;
+		   -moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+/* ---------- Forgot your Password ---------------- */
+.purple-surrounding-box {
+	/*display: inline-block;*/
+	text-align: center;
+	background: #5C1E31;
+	padding-left:50px;
+	padding-right:50px;
+	padding-top:20px;
+	padding-bottom:30px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+.white_text{
+	color:white;
+}
+.forgot_submit{
+	outline: none;
+	font-family: Arial, sans-serif;
+	width: 50%;
+	border: #ffffff solid 3px;
+	cursor:pointer;
+	background-color: #333333;
+	color:white;
+	font-size:15px;
+	padding-top:16px;
+	padding-bottom:16px;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+  	font-weight:600;
+    -moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+
+
+.forgot_input{
+	color:#3c3c3c;
+	font-family: Arial, sans-serif;
+  	font-weight:500;
+	font-size: 15px;
+	border-radius: 0;
+	line-height: 23px;
+	background-color: #fbfbfb;
+	padding: 5px 1px 1px 50px;
+	margin-bottom: 9px;
+	width:60%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+    border: 3px solid rgba(0,0,0,0);
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+}
+
+/* ----------------------- Contact Us Page Styling -------------- */
+
+textarea {
+    width: 100%;
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+}
+
+input:hover, textarea:hover, input:focus, textarea:focus {
+	background-color:white;
+}
+
+#contact-us-form-main {
+	width:100%;
+	text-align: center;
+	display: block;
+}
+
+.yellow-surrounding-box {
+	/*display: inline-block;*/
+	text-align: center;
+	background: #fcd703;
+	padding-left:50px;
+	padding-right:50px;
+	padding-top:20px;
+	padding-bottom:30px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+
+.contact-us-map {
+	margin-top: 40px;
+	width: 100%;
+	text-align: center;
+}
+
+.contact-us-map iframe {
+	width: 100%;
+	height: 350px;
+}
+
+#contact-us-location {
+	display: inline-block;
+	height: 350px;
+	width: 100%;
+	border: 3px solid #ffffff;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+
+.contact-us-input {
+	color:#3c3c3c;
+	font-family: Arial, sans-serif;
+  	font-weight:500;
+	font-size: 15px;
+	border-radius: 0;
+	line-height: 22px;
+	background-color: #fbfbfb;
+	padding: 13px 13px 13px 50px;
+	margin-bottom: 9px;
+	width:100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+  border: 3px solid rgba(0,0,0,0);
+  -moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+
+.contact-us-input:focus {
+	background: #fff;
+	box-shadow: none;
+	border: 3px solid #333333;
+	color: #333333;
+	outline: none;
+  	padding: 13px 13px 13px 50px;
+}
+
+#contact-us-name {
+	background-image: url(../images/name.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+	   -moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+
+#contact-us-name:focus {
+	background-image: url(../images/name.svg);
+	background-size: 30px 30px;
+	background-position: 8px 5px;
+  	background-position: 11px 8px;
+	background-repeat: no-repeat;
+	   -moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+
+#contact-us-email {
+	background-image: url(../images/email.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+	   -moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+
+#contact-us-email:focus {
+	background-image: url(../images/email.svg);
+	background-size: 30px 30px;
+  	background-position: 11px 8px;
+	background-repeat: no-repeat;
+	   -moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+
+#contact-us-message {
+	background-image: url(../images/comment.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+		   -moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+
+#contact-us-submit {
+	outline: none;
+	font-family: Arial, sans-serif;
+	width: 100%;
+	border: #ffffff solid 3px;
+	cursor:pointer;
+	background-color: #333333;
+	color:white;
+	font-size:20px;
+	padding-top:16px;
+	padding-bottom:16px;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+  	font-weight:600;
+  		   -moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+
+#contact-us-submit:hover {
+	border: #333333 solid 4px;
+	background-color: #fff;
+	color: #fcd703;
+		   -moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+}
+
+#contactSuccessMessage, #contactErrorMessage { 
+	display:none;
+	transition: opacity 0.85s ease-in-out;
+	opacity: 0;
+	margin-bottom: 15px;
+    font-size: large;
+    font-weight: bold;
+    padding: 5px;
+    color: white;
+    border: 2px white solid;
+}
+
+#contactSuccessMessage {
+	background-color: #07920d;;
+}
+
+#contactErrorMessage { 
+    background-color: #b70000;
+}
+
+.inputError {
+	border: 3px solid #b70000 !important;
+}
+
+@media ( max-width : 767px) {
+	#contact-us-form-div {
+		width: 95%;
+	}
+}
+
+@media ( min-width : 768px) {
+	#contact-us-form-div {
+		width: 70%;
+	}
+}

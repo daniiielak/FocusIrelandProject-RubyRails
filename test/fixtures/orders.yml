@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  details: MyString
+  date: 2018-03-23 11:31:23
+  total: 9.99
+  status: MyString
+  product: one
+
+two:
+  details: MyString
+  date: 2018-03-23 11:31:23
+  total: 9.99
+  status: MyString
+  product: two

@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  </head>
+  <body>
+    
+  <h1>Contact Us</h1>
+
+  <p>Select the most convenient way to contact us between Contact Form, Telephone and E-Mail and we’ll get back to you as soon as we can.</p>
+  <br>
+
+  <div id="contact-us-form-main">
+        <div class="yellow-surrounding-box">
+          <h2><b>Contact Form</b></h2>
+          <br>
+          <form name="contactForm" autocomplete="off" novalidate>
+
+            <div id="contactSuccessMessage"></div>
+
+            <div class="contact-us-name">
+              <input name="name" type="text" class="contact-us-input" placeholder="Your Name" id="contact-us-name" oninput="focusIrelandApp.formReqNameValidation()" />
+            </div>
+
+            <div class="email">
+              <input name="email" type="text" class="contact-us-input" id="contact-us-email" placeholder="Your Email" oninput="focusIrelandApp.formReqEmailValidation()" />
+            </div>
+
+            <div class="text">
+              <textarea name="text" class="contact-us-input" id="contact-us-message" placeholder="Your Message" oninput="focusIrelandApp.formReqMessageValidation()"></textarea>
+            </div>
+
+            <div id="contactErrorMessage"></div>
+
+            <div>
+              <button type="button" id="contact-us-submit" onclick="focusIrelandApp.submitContactForm()">Send Message</button>
+            </div>
+
+            <div>
+              <br>
+              <p><b>Telephone Number:</b> (01) 881 5900</p>
+              <p><b>Email:</b> online-shoebox-appeal@focus-ireland.ie</p>
+              <p><b>Address: </b>Focus Ireland Dublin, 9 – 12 High Street, Christchurch Dublin 8, Dublin, Ireland</p>
+            </div>
+
+            <div class="contact-us-map">
+              <h2>Our location</h2>
+              <br>
+              <div id="contact-us-location">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2382.011519896056!2d-6.276086048819785!3d53.34304997988009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670c26402705e9%3A0x30e2e8a852f8546e!2sFocus+Ireland!5e0!3m2!1sen!2sat!4v1522246514432" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </body>
+</html>

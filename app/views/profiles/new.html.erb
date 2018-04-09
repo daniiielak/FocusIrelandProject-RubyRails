@@ -1,0 +1,10 @@
+<h1>New Profile</h1>
+
+<div class="yellow-surrounding-box">
+  
+<%= render 'form', profile: @profile %>
+<% if current_user && current_user.admin? %>
+ <%= link_to 'Back', profiles_path %>
+<% end %>
+
+</div>
