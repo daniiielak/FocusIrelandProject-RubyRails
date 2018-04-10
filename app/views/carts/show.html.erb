@@ -1,18 +1,22 @@
-<h1>You Cart</h1>
 
-<div class="yellow-surrounding-box">
-<body>
+<h1>You Cart</h1>
+<p>Find the summary of the cart products below: </p>
     <div class="yellow-surrounding-box">
+
+<% if @order_items.size>0 %>
                 <div class="cart_item">
 	            <%= render "carts/cart_item" %>
-	           </div>
-	           <div class="btn btn-success">
-	           <%= link_to "Pay Now #{current_order.subtotal}", payments_path %>
-	           </div>
-	  </div>
+	  <% else %>
+	  <h3> The cart is Empty</h3>
+		<p> Please add some products to proceed</p>
+			<%= link_to 'Continue Shopping', :controller => :products %>
+		<% end %>
+ </div>
 	  <div>
-	    <% if current_user.admin? %>
+	    <% if current_user && current_user.admin? %>
    <%= link_to 'New Product', new_product_path %>
    <% end %>
+ </div>
 </div>
-</body>
+
+</br>

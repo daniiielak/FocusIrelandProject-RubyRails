@@ -1,13 +1,13 @@
-<body>
-    <div class="yellow-surrounding-box">
+ <div class="yellow-surrounding-box">
+    	<% if user_signed_in? %>
                 <div class="msg">
 	            <%= render "thankyous/msg" %>
 
 	           <%= link_to 'Continue Shopping', :controller => :products %>
+	           <br>
+	           <%= link_to 'My Account', signedinuserprofile_url %>
+	           	<% else %>
+	           	  <h1>Please visit our product page</h1>
+				<%= link_to 'Continue Shopping', :controller => :products %> 
+				<% end %>
 	  </div>
-	  <div>
-	    <% if current_user.admin? %>
-   <%= link_to 'New Product', new_product_path %>
-   <% end %>
-</div>
-</body>

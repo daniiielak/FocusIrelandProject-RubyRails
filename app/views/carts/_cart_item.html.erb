@@ -1,42 +1,46 @@
-<% if !@order_item.nil? && @order_item.errors.any? %>
-	<ul>
-		<% @order_item.errors.full_messages.each do |msg| %>
-			<li><%= msg %></li>
-		<% end %>
-	</ul>
-<% end %>
+<div>
+		<div>
+		    <h5>Order Total: <%="#{current_order.subtotal}"%></h4>
+		    <%= button_to 'Go to checkout', payments_path, :method => :get %>
+		    <%= link_to 'Empty Cart', carts_index_url(@carts), method: :get, data: { confirm: 'Are you sure?' } %>
+		</div>
+		<h4><strong><u>Order Summary</u></strong></h4>
+		
+		<div class="yellow-surrounding-box">
+		<% if @order_items.size>0 %>
+			<% @order_items.each do |item| %>
 
-<% if @order_items.size>0 %>
-	<% @order_items.each do |item| %>
-		<div class="table">
-			<div class="row">
-				<div class="col-sm-8">
-					<h4><%= item.product.product%></h4>
-					<h5><%= item.product.description%></h5>
-					<h5>€<%= item.product.price %></h5>
+				<div class="table">
+					<div class="row">
+					<div class="col-sm-8">
+						
+					<h6><strong><u><%= item.product.product%></u></strong></h6>
+					<h6>€<%= item.product.description%></h6>
+					<h6>€<%= item.product.price%></h6>
 				</div>
 				<div class="col-sm-4">
 					<div class="pull-right">
 					<%= form_for(item, remote: true) do |f| %>
 						<%= f.hidden_field :product_id, value: item.product.id %>
-						<h5><%= item.product.product %></h5>
+					
 						<div class="form-group">
-							<%= f.text_field :quantity, value: item.quantity.to_i, min: 1, class: 'form-control' %>
+							<%= f.text_field :quantity, value: item.quantity.to_i, min: 1, :maxlength=>"7" %>
 						</div>
 						<div class="btn-group">
-							<%= f.submit "Update", class: 'btn btn-primary' %>
-							<%= link_to "Delete", item, method: :delete, remote: true, class: 'btn btn-danger'  %>
+							<%= button_to "Update" %> 
+							</br>
+							<%= button_to "Delete", item, method: :delete, remote: true, data: {confirm: "Are you sure you want to remove the Item"}   %>
 						</div>
-						<!--span>Total Price:€ <!--%= item.total_price %></span-->
 						<h5>€<%= item.total_price %></h5>
 					<% end %>
 					</div>
 				</div>
 			</div>
-			
 		</div>
-		
+		</div>
+	</div>
 	<% end %>
+
 <% else %>
 	
 <% end %>

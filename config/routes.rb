@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'payment_notification/create'
+
   get 'site/about'
   get 'site/contact'
 
@@ -16,10 +18,14 @@ Rails.application.routes.draw do
 
   resources :products
   resources :order_items
-  resource :carts, only: [:show]
+  resource :carts, only: [:show] 
   resource :payments, only: [:show]
   resource :thankyous, only: [:show]
-  #get '/thankyous'=> 'thankyous#index'
+  delete '/carts' => 'carts#destroy'
+  get '/carts/index' => 'carts#index'
+  
+  #resources :payment_notification, only: [:create]
+  get '/profile/show'=> 'profile#show'
   
 # devise_for "users", :skip => [:registrations]
 #  as :user do

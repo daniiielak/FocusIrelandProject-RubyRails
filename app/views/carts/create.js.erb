@@ -1,5 +1,0 @@
-<% if @order.errors.any? || @order_item.errors.any? %>
-	alert("Invalid")
-<% else %>
-	$(".order_item").html("<%= escape_javascript(render 'payments/pay_now') %>")
-<% end %>

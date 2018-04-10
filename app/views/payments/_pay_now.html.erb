@@ -1,25 +1,19 @@
+<p>We are extremely happy that you are making this doation through Focus Ireland. Please fill in the below details</p>
  <form>
-    <div class="input-group">
-    	<input id="name" type="text" class="form-control" name="name" placeholder="Name">
-      <span class="input-group-addon"></i></span> 
-    </div>
-    <div class="input-group">
-       	<input id="telephone" type="text" class="form-control" name="telephone" placeholder="Telephone">
-      <span class="input-group-addon"></i></span> 
-    </div>
-      <div class="input-group">
-         	<input id="address" type="text" class="form-control" name="address" placeholder="Address">
-      <span class="input-group-addon"></i></span> 
-    </div>
-  </form>
-	<div>
+     <form action="thankyous/show.html.erb">
+      <input type="text" class="form-control"  name="name" placeholder="Name" required>
+      <input type="text" class="form-control"  name="phone" placeholder="Telephone" required>
+      <input type="text" class="form-control" name="email" placeholder="Email" required>
+      
+      <input type="Submit">
+  <div>
 		<h5>Price: €<%= "#{current_order.subtotal}"%></h5>
-		<h5>Shipping fee: free</h5>
-		<h5>Total Price: €<%= "#{current_order.subtotal}"%></h5>
-		<div class="btn btn-success">
-		<%= link_to 'Pay Now', thankyous_path %>
-	  <% @order_items.each do |current_order| %>
-	  <%= link_to "Pay Now", current_order, method: :delete, remote: true, class: 'btn btn-success' %>
-	     </div>
-	     <% end %>
-	</div>
+
+		</div>
+		</form>
+
+	     <div>
+	      <p>We appreciate your kind donation! Click pay now to complete your order </p>
+	 <%= button_to 'Pay Now', thankyous_path, :method => :get %>
+
+	  </div>
