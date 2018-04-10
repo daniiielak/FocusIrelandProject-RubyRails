@@ -1,46 +1,47 @@
 <div>
 		<div>
-		    <h5>Order Total: <%="#{current_order.subtotal}"%></h4>
+			<h3><strong><u>Order Summary:</u></strong></h3>
+		    <h5><strong>Order Total: <%="#{current_order.subtotal}"%></strong></h5>
 		    <%= button_to 'Go to checkout', payments_path, :method => :get %>
-		    <%= link_to 'Empty Cart', carts_index_url(@carts), method: :get, data: { confirm: 'Are you sure?' } %>
+		    </br>
+		    <%= button_to 'Empty Cart', carts_index_url(@carts), method: :get, data: { confirm: 'Are you sure?', commit: 'Sure!' } %>
 		</div>
-		<h4><strong><u>Order Summary</u></strong></h4>
-		
-		<div class="yellow-surrounding-box">
-		<% if @order_items.size>0 %>
-			<% @order_items.each do |item| %>
+<div class="yellow-surrounding-box">
 
-				<div class="table">
-					<div class="row">
-					<div class="col-sm-8">
-						
-					<h6><strong><u><%= item.product.product%></u></strong></h6>
-					<h6>€<%= item.product.description%></h6>
-					<h6>€<%= item.product.price%></h6>
-				</div>
-				<div class="col-sm-4">
-					<div class="pull-right">
-					<%= form_for(item, remote: true) do |f| %>
-						<%= f.hidden_field :product_id, value: item.product.id %>
-					
-						<div class="form-group">
-							<%= f.text_field :quantity, value: item.quantity.to_i, min: 1, :maxlength=>"7" %>
-						</div>
-						<div class="btn-group">
-							<%= button_to "Update" %> 
-							</br>
-							<%= button_to "Delete", item, method: :delete, remote: true, data: {confirm: "Are you sure you want to remove the Item"}   %>
-						</div>
-						<h5>€<%= item.total_price %></h5>
-					<% end %>
+<% if @order_items.size>0 %>
+<table class='catalog'>
+  <% @order_items.each do |item| %>
+   <tr>
+        <td>
+          <br>
+          <div class='title'>
+            <strong><%= item.product.product%></strong>
+          </div>
+          <div class='description'>
+            <%= item.product.description%>
+          </div>
+          <div class='price'>
+            <p><strong>Price: <%= number_to_currency(item.product.price, :unit => '€') %></strong></p>
+          </div>
+          <br>
+
+            <td><div>
+         <%= form_for(item, remote: true) do |f| %>
+					<%= f.hidden_field :product_id, value: item.product.id %>
+					<div class="form-group">
+						<%= f.text_field :quantity, value: item.quantity.to_i, min: 1, :maxlength=>"7" %> 
+						<br>
 					</div>
+			<%= button_to "Update" %> <% end %>
+            <%= button_to "Delete", item, method: :delete, remote: true, data: {confirm: "Are you sure you want to remove the Item"} %>
+            
+					
+				<% end %></br></td>
 				</div>
-			</div>
-		</div>
-		</div>
-	</div>
-	<% end %>
-
-<% else %>
-	
-<% end %>
+          <% end %>
+          </div>
+        </tr>
+   
+</table>          
+  </div>        
+  <br>
