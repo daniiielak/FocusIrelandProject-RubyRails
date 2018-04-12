@@ -1,10 +1,12 @@
-<p>We are extremely happy that you are making this doation through Focus Ireland. Please fill in the below details</p>
+<p>We are extremely happy that you are making this donation through Focus Ireland. Please fill in the below details</p>
  <form>
      <form action="thankyous/show.html.erb">
-      <input type="text" class="form-control"  name="name" placeholder="Name" required>
-      <input type="text" class="form-control"  name="phone" placeholder="Telephone" required>
-      <input type="text" class="form-control" name="email" placeholder="Email" required>
-      
+      <input type="text" class="form-control"  name="name" placeholder="Name on the Card" required><br>
+      <input type="text" class="form-control" name="email" placeholder="Email Address" required><br>
+      <input type="text" class="form-control"  name="cc" placeholder="Card Number" required>
+      <input type="date" class="form-control"  name="date" placeholder="Date" required>
+      <input type="text" class="form-control" name="ccv" placeholder="CCV code" required>
+   
       <input type="Submit">
   <div>
 		<h5>Price: €<%= "#{current_order.subtotal}"%></h5>

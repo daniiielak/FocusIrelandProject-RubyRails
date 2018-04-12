@@ -7,7 +7,9 @@ class OrderItemsController < ApplicationController
 		@order.save
 		session[:order_id] = @order.id
 		
+		flash[:success] = "Item was sucessfully added!" 
 		redirect_back(fallback_location: root_path)
+		
 	end
 
 	def update
@@ -16,6 +18,7 @@ class OrderItemsController < ApplicationController
 		@order_item.update_attributes(order_item_params)
 		@order_items = @order.order_items
 		
+		flash[:success] = "Item was sucessfully added!"
 		redirect_back(fallback_location: root_path)
 	end
 
@@ -25,6 +28,7 @@ class OrderItemsController < ApplicationController
 		@order_item.destroy
 		@order_items = @order.order_items
 		
+		flash[:danger] = "Item was removed from the Cart!" 
 		redirect_back(fallback_location: root_path)
 	end
 

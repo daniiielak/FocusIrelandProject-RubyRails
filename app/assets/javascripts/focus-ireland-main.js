@@ -283,3 +283,4 @@ focusIrelandApp.clearContactForm = function() {
 	document.contactForm.email.value = "";
 	document.contactForm.text.value = "";
 };
+
