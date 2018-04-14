@@ -47,15 +47,25 @@
             <td><div class="pull-right">
           <%= form_for(@order_item, remote: true) do |f| %>
 					<%= f.hidden_field :product_id, value: product.id %>
-					<p><strong>Available: </strong>
-					<%= product.quantity %></p>
-					<div class="form-group">
+					
+					<% if product.quantity==0 %>
+	        <br>
+					<p style="font-size:12px; color:red"><strong>Currently out of Stock</strong></p>
+          <% else %>
+          <br>
+          <p><strong>Available: </strong>
+           <%= product.quantity %></p>
+           <div class="form-group">
 						<%= f.text_field :quantity, value: 1, min: 1, :maxlength=>"7" %> 
 						<br>
 					</div>
 					
             <%= f.submit "Add to cart" %>
             <% end %>
+					
+          <% end %>
+          <br>
+          
 					
 				<% end %></br></td>
 				</div>
