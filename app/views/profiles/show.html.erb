@@ -25,6 +25,7 @@
 <% end %>
 
  <%= link_to 'Edit', edit_profile_path(@profile) %> 
+
 <% if current_user && current_user.admin? %>
  <%= link_to 'Back', profiles_path %>
 <% end %>
