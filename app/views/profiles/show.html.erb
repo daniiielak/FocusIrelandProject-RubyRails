@@ -24,7 +24,10 @@
  </p>
 <% end %>
 
- <%= link_to 'Edit', edit_profile_path(@profile) %> 
+ <%= link_to 'Edit', edit_profile_path(@profile), :style => 'color:white; font-style:arial'; %> 
+<br/>
+<%= link_to 'Cancel my account', contact_path(@contact), :style => 'color:white; font-style:arial';%>
+
 
 <% if current_user && current_user.admin? %>
  <%= link_to 'Back', profiles_path %>
